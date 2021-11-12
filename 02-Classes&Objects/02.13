@@ -1,0 +1,23 @@
+//a
+public class Smartphone
+{
+    String brand;
+    String op_system;
+    int version;
+    String PINcode;
+    float size;
+    
+    public static void TurnOn()
+        { System.out.println("Hello User!");
+        }
+    public void parameters()
+        { System.out.println("Operation system: "+ op_system + " "+ "Version: " + version + " "+"Size: "+ size);
+        }
+    public static void TurnOff()
+        { System.out.println("Bye User!");
+        }
+    
+    
+
+}
+//b
