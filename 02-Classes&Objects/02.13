@@ -21,3 +21,21 @@ public class Smartphone
 
 }
 //b
+public class BankAccount
+{
+    static String bank= "mBank";
+    static String currency= "PLN";
+    String id;
+    String pincode;
+    float saldo;
+    
+    public static void bank()
+    {System.out.println("Your account is in " + bank);
+    }
+    public static void currency()
+    {System.out.println("Currency on your account is " + currency);
+    }
+    public void saldo()
+    { System.out.println("Your saldo is "+ saldo);
+    }
+}
