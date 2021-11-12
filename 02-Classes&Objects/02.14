@@ -1,0 +1,28 @@
+public class Book
+{
+    String title;
+    String author;
+    String publisher;
+    String genre;
+    String ISBN;
+    int pub_year;
+    int pages;
+    
+
+    public Book()
+    {
+        // initialise instance variables
+        
+    }
+
+    public void info()
+    { System.out.println("Book title is "+title+" and the author is "+author+".");
+      System.out.println("Published by "+publisher+" in "+pub_year+ " year.");
+    }
+    
+    public void shop_info()
+    {System.out.println("ISBN: "+ ISBN);
+     System.out.println("Number of pages: "+ pages);
+     System.out.println("Genre: "+ genre);
+    }
+}
