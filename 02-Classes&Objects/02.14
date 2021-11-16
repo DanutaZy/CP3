@@ -7,13 +7,6 @@ public class Book
     String ISBN;
     int pub_year;
     int pages;
-    
-
-    public Book()
-    {
-        // initialise instance variables
-        
-    }
 
     public void info()
     { System.out.println("Book title is "+title+" and the author is "+author+".");

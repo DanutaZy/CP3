@@ -1,0 +1,25 @@
+public class counter
+{
+    // instance variables - replace the example below with your own
+    int value=0;
+    public int ino()
+    {
+        return value=value+1;
+    }
+    public int dico()
+    {   
+        return value=value-1;
+    }
+    public int inte()
+    {
+        return value=value+10;
+    }
+    public int dicte()
+    {
+        return value=value-10;
+    }
+    public int reset()
+    {
+        return value=0;
+    }
+}

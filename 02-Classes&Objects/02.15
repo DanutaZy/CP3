@@ -1,0 +1,20 @@
+public class Lamp
+{
+    boolean On= false;
+    
+    public void SwitchOn()
+    {   
+        On = true;
+    }
+    public void SwitchOff()
+    {   
+        On= false;
+    }
+    public void State()
+    {   if(On==true)
+        {System.out.println("Lamp is on.");}
+        
+        if(On==false)
+        {System.out.println("Lamp is off.");}
+    }
+}
