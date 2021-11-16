@@ -1,0 +1,30 @@
+public class CinemaTicket
+{   String cinema="Morning Star Cinema";
+    String movie="Gladiator";
+    int row;
+    int seat;
+    String prize;
+    String dimenition ="2D";
+    String language="eng";
+    public CinemaTicket(int row)
+    {   if (row<3)
+        {prize="10 PLN";}
+        else
+        {prize="25 PLN";}
+    }
+    public static void main (String []args)
+    {   
+        CinemaTicket ticket1 = new CinemaTicket(2);
+        ticket1.row=2;
+        ticket1.seat=15;
+        CinemaTicket ticket2 = new CinemaTicket(7);
+        ticket2.row=7;
+        ticket2.seat=11;
+        System.out.println("Cinema: "+ticket1.cinema+ " Movie: "+ticket1.movie);
+        System.out.println("Row: "+ ticket1.row+" Seat: "+ticket1.seat+" Price: "+ticket1.prize);
+        System.out.println("Cinema: "+ticket2.cinema+" Movie: "+ ticket2.movie);
+        System.out.println("Row: "+ticket2.row+" Seat: "+ticket2.seat+" Price: "+ticket2.prize);
+    
+    }
+
+}

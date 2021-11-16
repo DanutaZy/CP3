@@ -1,0 +1,48 @@
+public class Person
+{
+    String PersonName;
+    double PersonWeight;
+    double PersonHeight;
+    double BMI;
+    public Person(String name)
+    { 
+        PersonName=name;
+    }
+    public Person(String name, double weight, double height)
+    {   
+        PersonName=name;
+        PersonWeight=weight;
+        PersonHeight=height;
+    }
+    public void setWeightAndHeight(double weight, double height)
+    {
+        PersonWeight=weight;
+        PersonHeight=height;
+    }
+    public void calculateBMI()
+    {   
+        BMI =PersonWeight/(PersonHeight+PersonHeight)*100;
+    }
+    public void displayRecord()
+    {
+        System.out.println("Name: "+PersonName + " Weight :"+ PersonWeight+" Height: "+ PersonHeight);
+        System.out.println("BMI: "+BMI);
+        if(BMI<18.5)
+        {System.out.println("BMI too low");}
+        else if(BMI>24.9)
+        {System.out.println("BMI too high");}
+    }
+    public static void main(String [] args)
+    {
+        Person first=new Person("Anna");
+        first.setWeightAndHeight(60,155.7);
+        first.calculateBMI();
+        first.displayRecord();
+        Person second= new Person("Marek",78,180);
+        second.calculateBMI();
+        second.displayRecord();
+        Person third= new Person("Alicja",53,156);
+        third.calculateBMI();
+        third.displayRecord();
+    }
+}

@@ -1,0 +1,30 @@
+public class CinemaTicket
+{
+    String movie;
+    int row;
+    int seat;
+    float prize;
+    String dimenition ="2D";
+    String language="eng";
+    public static void main (String []args)
+    {   
+        CinemaTicket ticket1 = new CinemaTicket();
+        ticket1.movie="Diuna";
+        ticket1.row=3;
+        ticket1.seat=15;
+        ticket1.prize=19;
+        CinemaTicket ticket2 = new CinemaTicket();
+        ticket2.movie="Venom 2";
+        ticket2.row=5;
+        ticket2.seat=11;
+        ticket2.prize=19;
+        System.out.println("First ticket: "+ticket1.movie +" "+ ticket1.row+" "+ticket1.seat+" "+ticket1.prize);
+        System.out.println("Second ticket: "+ ticket2.movie+" "+ticket2.row+" "+ticket2.seat+" "+ticket2.prize);
+    
+    }
+    public CinemaTicket()
+    {
+        row=3;
+    }
+
+}
