@@ -1,25 +1,58 @@
-public class counter
-{
-    // instance variables - replace the example below with your own
-    int value=0;
-    public int ino()
-    {
-        return value=value+1;
+public class Counter {
+        int initial;
+        int end;
+
+        public Counter(int end) {
+            this.initial = 0;
+            this.end = end;
+        }
+
+        void resetInitial() {
+            this.initial = 0;
+        }
+
+        void counterIncrBy1() {
+            this.initial += 1;
+        }
+
+        void counterIncrBy10() {
+            this.initial += 10;
+        }
+
+        void counterDecrBy1() {
+            this.initial-= 1;
+        }
+
+        void counterDecrBy10() {
+            this.initia-= 10;
+        }
+
+        void count() {
+            while (initial!=end) {
+                if (end > 0) {
+                    if ((end - initial)>= 10) {
+                        counterIncrBy10();
+                    } else {
+                        counterIncrBy1();
+                    }
+                } else {
+                    if ((end - initial)<=-10) {
+                        counterDecrBy10();
+                    } else {
+                        counterDecrBy1();
+                    }
+                }
+                System.out.println(initial);
+            }
+        }
     }
-    public int dico()
-    {   
-        return value=value-1;
+
+    public static void main(String[] args) {
+        Counter counter1 = new Counter(23);
+        Counter counter2 = new Counter(-47);
+
+        counter1.count();
+        System.out.println();
+        counter2.count();
+        System.out.println();
     }
-    public int inte()
-    {
-        return value=value+10;
-    }
-    public int dicte()
-    {
-        return value=value-10;
-    }
-    public int reset()
-    {
-        return value=0;
-    }
-}
