@@ -1,0 +1,57 @@
+public class InternetDevice
+{   
+    String name;
+    boolean connected = false;
+    static int ConnectedDevices=0;
+    public InternetDevice(String name)
+    {
+        this.name=name;
+    }
+    void connect()
+    {   
+        connected=true;
+        ConnectedDevices+=1;
+    }
+    public void disconnect()
+    {
+        connected=false;
+        ConnectedDevices-=1;
+    }
+    void isConnected()
+    { if (connected == false) {
+                System.out.println("Device is offline..");
+            } else {
+                System.out.println("Device is online..");
+            }
+    }
+    public void displayStatus()
+    {   if(connected==true){
+        System.out.println(name+" is connected.");}
+        else
+        {System.out.println(name+" is not connected.");}
+    }
+    public static void displayConnections()
+    {
+        System.out.println(ConnectedDevices + "devices are connected.");
+    }
+    public static void main(String[]args)
+    {
+        InternetDevice TV=new InternetDevice("TV");
+        InternetDevice PC=new InternetDevice("PC");
+        InternetDevice Laptop=new InternetDevice("Laptop");
+        InternetDevice Smartphone=new InternetDevice("Smartphone");
+        InternetDevice Tablet=new InternetDevice("Tablet");
+        
+        TV.connect();
+        Laptop.connect();
+        Tablet.connect();
+        
+        TV.displayStatus();
+        PC.displayStatus();
+        Laptop.displayStatus();
+        Smartphone.displayStatus();
+        Tablet.displayStatus();
+        InternetDevice.displayConnections();
+
+    }
+}

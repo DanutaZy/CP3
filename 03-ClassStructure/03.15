@@ -1,0 +1,85 @@
+public class Statistics
+{
+    static int x;
+    static int y;
+    static float c;
+    public static void NumberofItems(int a, int b)
+    {
+        x=a;
+        y=b;
+        if (x==y)
+        {System.out.println("1 Item.");}
+        else if (x>y)
+        {for (int i=1;x==y;i++)
+            {x=x-1;
+            c=i;}
+         System.out.println(c+"Items");
+        }
+        else
+        {for (int i=1;x<=y;i++)
+            {x=x+1;
+            c=i;}
+         System.out.println(c+"Items");
+        }
+    }
+    public static void SumofNumbers(int a, int b)
+    {
+        x=a;
+        y=b;
+        int s=0;
+                if (x==y)
+        {   s=x+y;
+            System.out.println(s);}
+        else if (x>y)
+        {for (int i=0;x>=y;i++)
+            {s=s+x;
+             x=x-1;
+            }
+         System.out.println(s);
+        }
+        else
+        {for (int i=0;x<=y;i++)
+            {
+             s=s+x;
+             x=x+1;
+            }
+         System.out.println(s);
+        }
+    }
+    public static void ArithmeticMean(int a,int b)
+    {
+        x=a;
+        y=b;
+        float m;
+        float s=0;
+         if (x==y)
+        {   m=(x+y)/2;
+            System.out.println(m);}
+        else if (x>y)
+        {for (int i=1;x>=y;i++)
+            {
+             s=s+x;
+             x=x-1;
+             c=i;
+            }
+         m=s/c;
+         System.out.println(m);
+        }
+        else
+        {for (int i=1;x<=y;i++)
+            {
+             s=s+x;
+             x=x+1;
+             c=i;
+            }
+         m=s/c;
+         System.out.println(m);
+        }
+    }
+    public static void main(String [] args)
+    {
+        NumberofItems(5,10);
+        SumofNumbers(5,10);
+        ArithmeticMean(5,10);
+    }
+}
