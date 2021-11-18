@@ -17,4 +17,12 @@ public class Lamp
         if(On==false)
         {System.out.println("Lamp is off.");}
     }
+    public static void main (String[] args)
+    {
+        Lamp lamp1= new Lamp();
+        Lamp lamp2= new Lamp();
+        lamp1.SwitchOn();
+        lamp1.State();
+        lamp2.State();
+    }
 }

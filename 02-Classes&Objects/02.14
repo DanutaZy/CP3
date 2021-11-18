@@ -18,4 +18,25 @@ public class Book
      System.out.println("Number of pages: "+ pages);
      System.out.println("Genre: "+ genre);
     }
+    public static void main (String [] args)
+    {
+      Book book1 = new Book();
+      book1.title="Book";
+      book1.author="Writer";
+      book1.publisher="BookPubHouse";
+      book1.ISBN="880-24334-1";
+      book1.pub_year=2004;
+      book1.pages=256;
+      Book book2 = new Book();
+      book2.title="Story";
+      book2.author="Skriver";
+      book2.publisher="PubHouse";
+      book2.ISBN="990-24334-1";
+      book2.pub_year=2001;
+      book2.pages=652;
+      book1.info();
+      book1.shop_info();
+      book2.info();
+      book2.shop_info();
+    }
 }

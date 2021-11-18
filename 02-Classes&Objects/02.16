@@ -4,6 +4,11 @@ public class Rectangle
     float w;
     float p;
     float sa;
+    public Rectangle(float l, float w)
+    {
+        this.l=l;
+        this.w=w;
+    }
       public float Perimeter()
     {
         p=2*(l+w);
@@ -19,5 +24,13 @@ public class Rectangle
         SurfaceArea();
         System.out.println("Perimeter is "+ p +".");
         System.out.println("Surface Area is "+ sa + ".");
+    }
+    public static void main (String[] args)
+    {
+        Rectangle rec1= new Rectangle(3,4);
+        Rectangle rec2=new Rectangle(2,7);
+        rec1.info();
+        rec2.info();
+
     }
 }
