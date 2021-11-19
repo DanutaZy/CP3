@@ -1,0 +1,103 @@
+public class Room
+{
+    int number;
+    int beds;
+    boolean occupied;
+    String guestName;
+    static Room[] rooms = new Room[6];
+
+    public Room (int number)
+    {
+        this.number=number;
+        beds=2;
+    }
+    public Room (int number, int beds)
+    {
+        this.number=number;
+        this.beds=beds;
+    }
+    void checkin(String guestName)
+    {
+        this.guestName=guestName;
+    }
+    void checkout()
+    {
+        guestName="Free room";
+    }
+    void isOccupied()
+    {
+        if (occupied==true)
+        {
+            System.out.println("Is occupied.");
+        }
+        else
+        {
+            System.out.println("Is not occupied.");
+        }
+    }
+    void displayStatus()
+    {
+        System.out.println("Room: "+number+" Beds:"+beds+" Occupied:"+occupied+" Guest Name:"+guestName );
+    }
+    static void raportB(Room[]args)
+    {   
+        for(int i = 0; i < rooms.length; i++)
+            {
+                rooms[i].displayStatus();
+            }
+    }
+    static void raportC(Room[]args)
+    {for(int i = 0; i < rooms.length; i++)
+            {
+                if(rooms[i].beds==2)
+                {
+                    rooms[i].displayStatus();
+                }
+            }
+	}
+    static void raportD(Room[]args)
+    {	
+    		int s=0;
+            for(int i=0;i<rooms.length;i++)
+            {   if(rooms[i].occupied==true)
+                {s+=1;}
+            }
+            int f=rooms.length-s;
+            System.out.println(s+" rooms are occupied."+ f+" rooms are free.");
+            }
+    static void raportE(Room[]args)
+    {	
+    	int s=0;
+            for(int i=0;i<rooms.length;i++)
+            {   if(rooms[i].occupied==false)
+                {s+=rooms[i].beds;}
+            }
+            System.out.println(s+" beds are free.");
+    
+    }
+    public static void main(String[]args)
+    {
+         
+            for (int i = 0; i < rooms.length; i++) {
+                if (i < 3) {
+                    rooms[i] = new Room(i);
+                } else if (i >= 3 && i < 5) {
+                    rooms[i] = new Room(i, 3);
+                } else {
+                    rooms[i] = new Room(i, 1);
+                }
+            }
+//a
+            rooms[0].displayStatus();
+            System.out.println(" ");
+            raportB(rooms);
+            System.out.println(" ");
+            raportC(rooms);
+            System.out.println(" ");
+            raportD(rooms);
+            System.out.println(" ");
+            raportE(rooms);
+
+     }
+
+}
