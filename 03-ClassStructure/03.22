@@ -19,6 +19,7 @@ public class Room
     void checkin(String guestName)
     {
         this.guestName=guestName;
+        occupied=true;
     }
     void checkout()
     {
