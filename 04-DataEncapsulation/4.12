@@ -1,0 +1,61 @@
+public class Blanket
+{
+    private String fabric;
+    private int width;
+    private int length;
+    private double prize;
+
+    public Blanket(String fabric,int width, int length, double prize)
+    {
+        setFabric(fabric);
+        setWidth(width);
+        setLength(length);
+        setPrize(prize);
+    }
+
+    public void setFabric(String fabric)
+    {
+        this.fabric=fabric.toLowerCase();
+    }
+
+    public String getFabric()
+    {
+        return fabric;
+    }
+    public void setWidth(int width)
+    {
+        this.width=width;
+    }
+    public int getWidth()
+    {
+        return width;
+    }
+    public void setLength(int length)
+    {
+        this.length=length;
+    }
+    public int getLength()
+    {
+        return length;
+    }
+    public void setPrize(double prize)
+    {
+        this.prize=prize;   
+    }
+    public double getPrize()
+    {
+        return prize;
+    }
+    public void displayInfo()
+    {
+        System.out.println("Fabric: "+ getFabric()+" Size: "+getWidth()+"x"+getLength()+" Prize: "+getPrize()+"PLN");
+    }
+
+    public static void main (String[] args)
+    {
+        Blanket favorite= new Blanket("Wool Blend", 170,200,25.00);
+        favorite.displayInfo();
+
+    }
+
+}
